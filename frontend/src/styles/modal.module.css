@@ -1,0 +1,68 @@
+.modalBackground{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .65);
+    width: 100vw;
+    height: 100vh;
+
+    /*Flex*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal{
+
+    background-color: white;
+    padding: 10px;
+    max-width: 500px;
+    margin: 0 10px;
+    border-radius: 10px;
+
+
+    /*Flex*/
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.modalRow1{
+
+    font-size: 25px;
+
+    /*Flex*/
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.icon:hover{
+
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.modalRow2{
+    
+    font-size: 25px;
+
+    /*Flex*/
+    display: flex;
+    flex-direction: column;
+
+}
+
+.modalRow2 label{
+    font-weight: bold;
+}
+
+.modalRow2 input{
+    flex-grow: 1;
+    outline: none;
+    padding-left: 5px;
+}
+
+.modalRow3{
+    margin: 0 auto;
+    font-size: 25px;
+}

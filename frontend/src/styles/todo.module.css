@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+
+:root{
+
+    --todo-button-backround-color:rgb(39, 39, 102);
+    --todo-button-background-color-hover:rgb(74, 74, 138);
+    --todo-button-background-color-disabled:rgba(39, 39, 102, .7);
+    --todo-header-backround-color:rgb(90, 112, 46);
+    --todo-body-background-color:rgb(139, 175, 73);
+}     
+
+.root{
+    
+    background-color: rgb(201, 201, 201);
+    font-family: 'Iceland';
+    width: 100vw;
+    height: 100vh;
+
+    /*Flex*/
+    display: flex;
+    justify-content: center;
+
+}
+
+.todo{
+
+    max-width: 600px;
+
+    /*Flex*/
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.todoHeader{
+
+    background-color: var(--todo-header-backround-color);
+    height: 100px;
+
+    /*Flex*/
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+}
+
+.todoHeaderRow1{
+
+    /*Flex*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.taskCount{
+    margin-left: 5px;
+    font-size: 30px;
+}
+
+.logoutButton{
+    background-color: var(--todo-button-backround-color);
+    font-size: 22px;
+    color: white;
+    border-radius: 5px 5px 5px 5px;
+    padding: 2px 6px;
+
+    display: flex;
+    align-items: center;
+}
+
+.logoutButton:hover{
+    cursor: pointer;
+    background-color: var(--todo-button-background-color-hover);
+}
+
+.todoHeaderRow2{
+
+    margin: 0 10px;
+
+    /*Flex*/
+    display: flex;
+    flex-grow: 1;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.searchDiv{
+    flex-grow: 1;
+    height: 25px;
+    background-color: white;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 3px solid var(--todo-button-backround-color);
+
+    /*Flex*/
+    display: flex;
+}
+
+.searchDivInput{
+
+    margin: 0 auto;
+    align-items: center;
+    outline: none;
+    border: none;
+    width: 0px;
+    border-radius: 10px;
+    font-size: 18px;
+
+    /*Flex*/
+    flex-grow: 1;
+    padding-left: 10px;
+
+}
+
+.searchDiv input::placeholder{
+    font-weight: bold;
+}
+
+.searchIcon{
+    color: rgb(133, 133, 133);
+    margin-right: 5px;
+
+    /*Flex*/
+    display: flex;
+    align-self: center;
+}
+
+.addIcon{
+
+    height: 50px;
+    width: 50px;
+    background-color: var(--todo-button-backround-color);
+    color: white;
+    font-size: 25px;
+    border-radius: 5px;
+    border: none;
+
+    /*Flex*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.addIcon:hover{
+    cursor: pointer;
+    background-color: var(--todo-button-background-color-hover);
+}
+
+.addIcon:disabled{
+    cursor: not-allowed;
+    background-color: var(--todo-button-background-color-disabled);
+}
+
+.todoBody{
+
+    background-color: var(--todo-body-background-color);
+    flex-grow: 1;
+    padding: 20px 10px 20px 10px;
+    overflow-y: scroll;
+
+   /*Flex*/
+   display: flex;
+   flex-direction: column; 
+   gap: 20px;
+
+}
+
+.todoTask{
+
+    background-color: var(--todo-header-backround-color);
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 3px solid var(--todo-button-backround-color);
+
+    /*Flex*/
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.todoTask:hover{
+    cursor: pointer;
+    background-color: rgb(80, 100, 39);
+}
+
+.todoTaskText{
+
+    color: white;
+    word-break: break-word;
+    font-size: 22px;
+
+    /*Flex*/
+    display: flex;
+    align-items: center;
+}
+
+.todoTaskCheck{
+
+    background-color: var(--todo-button-backround-color);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    font-size: 18px;
+
+    /*Flex*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.todoTaskCheck:hover{
+    cursor: pointer;
+    background-color: var(--todo-button-background-color-hover);
+}
+
+.todoTaskCheck:hover .todoTask{
+    cursor: pointer;
+    background-color: var(--todo-button-background-color-hover);
+} 
+
+@media (min-width: 600px) {
+
+    .todo{
+        margin: 10px;
+    }
+
+    .todoHeader{
+        border-radius: 5px 5px 0 0;
+    }
+    .todoBody{
+        border-radius: 0 0 5px 5px;
+    }
+
+}
